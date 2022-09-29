@@ -1,17 +1,13 @@
 package maxwainer.kdb
 
-import maxwainer.kdb.q.Lexer
 import maxwainer.kdb.struct.Database
+import maxwainer.kdb.struct.cell.CellTypeRegistry
 
 class ExecutionContext {
 
     var database: Database? = null
-    val lexerFactory: LexerFactory = LexerFactoryImpl()
+    val cellTypesRegistry = CellTypeRegistry()
+    val databasePool = mutableListOf<Database>()
 
-
-
-    private inner class LexerFactoryImpl : LexerFactory {
-        override fun createLexer(input: String) = Lexer(input, this@ExecutionContext)
-    }
 
 }

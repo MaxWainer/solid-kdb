@@ -1,7 +1,9 @@
 package maxwainer.kdb.struct
 
-class Database {
+class Database(val name: String) {
 
-    val name: String = ""
+    val tables = mutableListOf<Table>()
+
+
 
 }

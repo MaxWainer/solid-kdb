@@ -1,4 +1,6 @@
 package maxwainer.kdb.struct
 
-class Table {
+import maxwainer.kdb.struct.spec.TableSpec
+
+class Table(val spec: TableSpec) {
 }

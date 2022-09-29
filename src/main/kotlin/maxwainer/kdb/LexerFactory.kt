@@ -1,6 +1,6 @@
 package maxwainer.kdb
 
-import maxwainer.kdb.q.Lexer
+import maxwainer.kdb.qs.Lexer
 
 interface LexerFactory {
 
